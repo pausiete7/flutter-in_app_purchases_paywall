@@ -12,7 +12,7 @@ class MoritzSubRow extends StatefulWidget {
 }
 
 class _MoritzSubRowState extends State<MoritzSubRow> {
-  int _selectedIndex = -1;
+  int _selectedIndex = 2;
 
   onSelectIndex(int index) {
     setState(() {
