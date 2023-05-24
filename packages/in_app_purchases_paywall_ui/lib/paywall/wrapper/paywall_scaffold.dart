@@ -21,6 +21,7 @@ class PaywallScaffold extends StatelessWidget {
         appBar: AppBar(
           title: Text(appBarTitle ?? "Premium"),
           elevation: 0.0,
+          automaticallyImplyLeading: false,
           actions: [],
         ),
         body: child);
