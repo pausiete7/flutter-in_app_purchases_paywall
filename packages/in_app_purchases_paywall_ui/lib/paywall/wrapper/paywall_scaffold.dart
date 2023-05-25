@@ -15,15 +15,6 @@ class PaywallScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        key: _scaffoldKey,
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        appBar: AppBar(
-          title: Text(appBarTitle ?? "Premium"),
-          elevation: 0.0,
-          automaticallyImplyLeading: false,
-          actions: [],
-        ),
-        body: child);
+    return child;
   }
 }

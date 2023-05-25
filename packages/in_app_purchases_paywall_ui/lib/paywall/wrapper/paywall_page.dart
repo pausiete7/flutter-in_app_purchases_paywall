@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// Wrap the Paywall in a Page or use it with flutter navigation 2.0
+
 class PaywallPage extends Page {
   final Widget child;
 
