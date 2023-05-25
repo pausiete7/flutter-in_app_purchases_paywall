@@ -21,46 +21,40 @@ class MoritzPaywallPurchase extends StatelessWidget {
           color: theme.brightness == Brightness.dark
               ? theme.colorScheme.surface
               : theme.appBarTheme.backgroundColor ?? theme.colorScheme.primary),
-      child: ListView(
-        shrinkWrap: true,
-        primary: false,
-        children: [
-          Card(
-            color: theme.cardColor,
-            margin: EdgeInsets.only(left: 0, right: 0, top: 8, bottom: 0),
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(32),
-                    topRight: Radius.circular(32))),
-            elevation: 0,
-            child: Padding(
-              padding:
-                  EdgeInsets.only(left: 16, right: 16, top: 32, bottom: 16),
-              child: Column(
-                children: [
-                  Padding(
-                      padding: EdgeInsets.only(left: 16, right: 16),
-                      child: Text(
-                        PaywallDataIW.of(context).subTitle ?? "",
-                        style: theme.textTheme.subtitle1,
-                      )),
-                  if (paywallData.campaignWidget != null)
-                    paywallData.campaignWidget!,
-                  MoritzSubRow(),
-                  Container(
-                    height: 16,
-                  ),
-                  MoritzBulletPoints(),
-                  MoritzRestoreRow(),
-                  Container(
-                    height: 16,
-                  ),
-                  const LegalRow()
-                ],
+      child: Card(
+        color: theme.cardColor,
+        margin: EdgeInsets.only(left: 0, right: 0, top: 8, bottom: 0),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(32),
+                topRight: Radius.circular(32))),
+        elevation: 0,
+        child: Padding(
+          padding:
+              EdgeInsets.only(left: 16, right: 16, top: 32, bottom: 16),
+          child: Column(
+            children: [
+              Padding(
+                  padding: EdgeInsets.only(left: 16, right: 16),
+                  child: Text(
+                    PaywallDataIW.of(context).subTitle ?? "",
+                    style: theme.textTheme.subtitle1,
+                  )),
+              if (paywallData.campaignWidget != null)
+                paywallData.campaignWidget!,
+              MoritzSubRow(),
+              Container(
+                height: 16,
               ),
-            ),
-          )
-        ],
+              MoritzBulletPoints(),
+              MoritzRestoreRow(),
+              Container(
+                height: 16,
+              ),
+              const LegalRow()
+            ],
+          ),
+        ),
       ),
     );
   }
